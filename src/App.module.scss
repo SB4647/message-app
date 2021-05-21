@@ -2,30 +2,60 @@
 
 /* CHAT STYLES */
 .App {
+    padding: 10px;
     text-align: center;
 }
 
-.app__form {
-    padding: 20px;
-    position: fixed;
-    bottom: 0px;
-    z-index: 1;
-    width: 100%;
-    margin: 20px;
-    background-color: rgb(39, 219, 210);
-}
+.app {
+    &__header {
+        padding: 10px 0px;
+        margin: 0px;
+        background-color: $primary;
+        height: 20%;
+    }
 
-.app_formControl {
-    display: flex !important;
-    flex-direction: row !important;
-}
+    &__heading {
+        font-family: "Lobster", cursive;
+    }
 
-.app__input {
-    //make input take up as much space as possible
-    flex: 1;
-}
+    &__subHeading,
+    &__heading {
+        margin: 0px;
+    }
 
-.app__iconButton {
-    //make sendIcon take up minimum amount of space
-    flex: 0;
+    &__form {
+        height: 10%;
+        padding: 20px;
+        position: fixed;
+        bottom: 0px;
+        z-index: 1;
+        width: 100%;
+        background-color: $primary;
+    }
+
+    &__clearButton {
+        position: absolute;
+        left: 20px;
+    }
+
+    &_formControl {
+        display: flex !important;
+        flex-direction: row !important;
+        height: 10%;
+        width: 100%;
+    }
+
+    &__input {
+        //make input take up as much space as possible
+        width: 90%;
+    }
+
+    &__iconButton {
+        //make sendIcon take up minimum amount of space
+        margin-right: 40px;
+    }
+
+    &__messages {
+        margin-bottom: 10%;
+    }
 }
