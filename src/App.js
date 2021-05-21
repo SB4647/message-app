@@ -118,7 +118,6 @@ const App = () => {
                     {messages.map(({ id, message }, index) => (
                         <Message
                             key={id}
-                            //ref={messages[index + 1] ? "" : messagesEndRef}
                             username={username}
                             message={message}
                         />
