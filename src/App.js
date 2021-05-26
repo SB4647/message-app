@@ -41,7 +41,7 @@ const App = () => {
             if (await response) {
                 db.collection("message").add({
                     message:
-                        "Hey there! To test the this app, type a message at bottom of page and press the send button.",
+                        "Hey there! To test this application, type a message at the bottom of page and press the send button. All messages are stored in a firebase database until the clear button is clicked or the application is restarted",
                     username: "Bot",
                     timestamp: firebase.firestore.FieldValue.serverTimestamp(),
                 });
