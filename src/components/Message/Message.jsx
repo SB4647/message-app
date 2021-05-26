@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import { Card, CardContent, Typography } from "@material-ui/core";
+import { Card, CardContent, Typography, Box } from "@material-ui/core";
 import styles from "./Message.module.scss";
 
 const Message = forwardRef(({ message, username }, ref) => {
@@ -17,13 +17,11 @@ const Message = forwardRef(({ message, username }, ref) => {
                 }
             >
                 <CardContent>
-                    <Typography
-                        color="white"
-                        variant="p"
-                        component="p"
-                        fontSize="1rem"
-                    >
-                        {!isUser && `${message.username || "Unknown User"}: `}
+                    <Typography variant="p" component="p" fontSize="1rem">
+                        <Box fontWeight="fontWeightBold" display="inline">
+                            {!isUser &&
+                                `${message.username || "Unknown User"}: `}
+                        </Box>
                         {message.message}
                     </Typography>
                 </CardContent>
